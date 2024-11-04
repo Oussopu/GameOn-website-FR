@@ -113,6 +113,17 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".close")
+const thanksMessage = document.querySelector(".thanks-message")
+const btnDesktop = document.getElementById("btn-desktop")
+const btnMobile = document.getElementById("btn-mobile")
+
+
+// confirmation inscription message 
+if (window.location.search) {
+  thanksMessage.style.display = "flex"
+  btnDesktop.style.display = "none"
+  btnMobile.style.display = "none"
+}
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));

@@ -130,6 +130,13 @@ main {
   background: #3876ac;
 }
 
+.thanks-message {
+  display: none;
+  color: #3876ac;
+  font-size: 30px;
+
+}
+
 .footer {
   margin: 20px;
   padding: 10px;
