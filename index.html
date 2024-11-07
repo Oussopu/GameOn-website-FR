@@ -17,9 +17,7 @@
       <img alt="logo" src="assets/img/Logo.png" width="auto" height="auto" />
     </div>
     <div class="main-navbar">
-      
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
+      <a href="#" class="active"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Évènements passés</span></a>
@@ -43,7 +41,6 @@
           <button id="btn-desktop" class="btn-signup modal-btn">
             je m'inscris
           </button>
-          <div class="thanks-message"><p>MERCI! <br> VOTRE INCRIPTION A BIEN ETE PRISE EN COMPTE.</p></div>
         </div>
         <div class="hero-img">
           <img src="assets/img/bg_img.jpg" alt="img" />
@@ -58,6 +55,7 @@
           <span class="close"></span>
           <div class="modal-body">
             <form
+              id="form"
               name="reserve"
               action="index.html"
               method="get"
@@ -66,57 +64,56 @@
               <div
                 class="formData">
                 <label for="first">Prénom</label><br>
-                <div id="first-error"><p>Veuillez entrer 2 caractères ou plus pour le champ du prénom</p></div>
                 <input
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
                 /><br>
+                <div id="first-error"><p>Veuillez entrer 2 caractères ou plus pour le champ du prénom</p></div>
               </div>
               <div
                 class="formData">
                 <label for="last">Nom</label><br>
-                <div id="last-error"><p>Veuillez entrer 2 caractères ou plus pour le champ du nom</p></div>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
                 /><br>
+                <div id="last-error"><p>Veuillez entrer 2 caractères ou plus pour le champ du nom</p></div>
               </div>
               <div
                 class="formData">
                 <label for="email">E-mail</label><br>
-                <div id="email-error"><p>Veuillez entrer une adresse mail valide</p></div>
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
                 /><br>
+                <div id="email-error"><p>Veuillez entrer une adresse mail valide</p></div>
               </div>
               <div
                 class="formData">
                 <label for="birthdate">Date de naissance</label><br>
-                <div id="birthdate-error"><p>Vous devez entrer votre date de naissance</p></div>
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <div id="birthdate-error"><p>Vous devez entrer votre date de naissance</p></div>
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <div id="quantity-error"><p>Veuillez entrer un nombre valide</p></div>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <div id="quantity-error"><p>Veuillez entrer un nombre valide</p></div>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
                 class="formData">
-                <div id="city-error"><p>Veuillez choisir une ville</p></div>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -183,11 +180,11 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <div id="city-error"><p>Veuillez choisir une ville</p></div>
               </div>
 
               <div
                 class="formData">
-                <div id="terms-error"><p>Veuillez accepter les termes et conditions</p></div>
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -199,6 +196,7 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
+                <div id="terms-error"><p>Veuillez accepter les termes et conditions</p></div>
                 <input 
                 class="checkbox-input" 
                 type="checkbox" 
@@ -217,6 +215,12 @@
                 value="C'est parti"
               />
             </form>
+            <div id="message-pop" class="message-pop">
+              <div class="thanks-message">Merci pour votre inscription</div>
+              <button id="btn-close" class="btn-submit">
+                Fermer
+              </button>
+            </div>
           </div>
         </div>
       </div>

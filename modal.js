@@ -32,7 +32,7 @@ function validate() {
   const quantityError = document.getElementById("quantity-error")
   const termsError = document.getElementById("terms-error")
   const cityError = document.getElementById("city-error")
-  
+
   let citySelect = false
   for ( const radio of city){
     if (radio.checked) {
@@ -113,16 +113,18 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".close")
-const thanksMessage = document.querySelector(".thanks-message")
 const btnDesktop = document.getElementById("btn-desktop")
 const btnMobile = document.getElementById("btn-mobile")
+const form = document.getElementById("form")
+const thanksMessage = document.getElementById("message-pop")
+const btnClose = document.getElementById("btn-close")
+const btnSubmit = document.querySelectorAll(".btn-submit")
 
-
-// confirmation inscription message 
+//confirmation incription message
 if (window.location.search) {
-  thanksMessage.style.display = "flex"
-  btnDesktop.style.display = "none"
-  btnMobile.style.display = "none"
+  modalbg.style.display ="flex"
+  form.style.display = "none"
+  thanksMessage.style.display = "flex";
 }
 
 // launch modal event
@@ -130,7 +132,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // launch modal form
 function launchModal() {
-  modalbg.style.display = "block";
+  modalbg.style.display = "flex";
 }
 
 // close modal fonction
@@ -140,3 +142,4 @@ function closeModal() {
 
 // closing modal action
 closeBtn.addEventListener("click", closeModal)
+btnClose.addEventListener("click", closeModal)
